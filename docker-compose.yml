@@ -4,7 +4,7 @@ services:
   postgres:
     image: "postgres:9-alpine"
     volumes:
-      - ${HOME}/dockervol:/var/lib/postgresql/data/pgdata
+      - ${HOME}/demoAppData:/var/lib/postgresql/data/pgdata
     environment:
       - POSTGRES_USER=reed
       - POSTGRES_PASSWORD=reed
