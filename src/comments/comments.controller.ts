@@ -19,6 +19,11 @@ export class CommentsController {
         return this.commentsService.findOne(id);
     }
 
+    @Get(':thread')
+    findAllThread(@Param('thread') threadId: number): Promise<Comments[]> {
+        return this.commentsService.findAllThread(threadId);
+    }
+
     @Post()
     create(@Body() createCommentDto: createCommentDto): Promise<Comments> {
         return this.commentsService.create(createCommentDto);

@@ -32,7 +32,7 @@ export class CommentsService {
         await this.commentsRepository.delete(id);
     }
 
-    async findAllThreadComments(threadId: number): Promise<Comments[]> {
+    async findAllThread(threadId: number): Promise<Comments[]> {
         return this.commentsRepository.find({
             where: {
                 threadId: threadId
